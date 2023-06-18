@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='style.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Ресторан</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .container {
+            margin: 0 20px;
+        }
+
+        .header {
+            position: relative;
+            height: 100vh;
+            background-image: url(bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .header::after {
+            content: "Текст на задньому фоні";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .header-line {
+            padding-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .nav-item {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            margin-right: 25px;
+            transition: color 0.3s linear;
+        }
+
+        .nav-item:hover {
+            color: #490aeb;
+        }
+
+        .cart {
+            position: relative;
+            border-right: 1px solid #ffffff;
+            padding-right: 10px;
+            height: 50px;
+        }
+
+        .cart-img {
+            position: absolute;
+            top: 18px;
+            right: 7px;
+        }
+
+        .num {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s linear;
+        }
+
+        .num:hover {
+            color: #490aeb;
+        }
+
+        .phone-text {
+            font-size: 14px;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        .phone-holder {
+            display: flex;
+            align-items: center;
+        }
+
+        .button {
+            background-color: #490aeb;
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 18px;
+            font-weight: 700;
+            transition: background-color 0.2s linear;
+        }
+
+        .button:hover {
+            background-color: #894b17;
+        }
+
+        .menu {
+            position: relative;
+            background-color: #ffffff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .menu::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+            margin-top: 30px;
+        }
+
+        .menu-item {
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .menu-item p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class='header'>
+    <div class='container'>
+        <div class='header-line'>
+            <div class='header-logo'>
+                <img src="logo.png" alt="">
+            </div>
+
+            <div class='nav'>
+                <a class='nav-item' href="index.html">ГОЛОВНА</a>
+                <a class='nav-item' href="menu.html">МЕНЮ</a>
+                <a class='nav-item' href="about.html">ПРО НАС</a>
+                <a class='nav-item' href="@">БРОНЬ</a>
+            </div>
+
+            <div class='cart'>
+                <a href="#">
+                    <img class='cart-img' src="cart.png" alt="">
+                </a>
+            </div>
+
+            <div class='phone'>
+                <div class='phone-holder'>
+                    <div class='phone-img'>
+                        <img src="phone.png" alt="">
+                    </div>
+
+                    <div class='number'><a class='num' href='#'>+380633753412</a></div>
+                </div>
+
+                <div class='phone-text'>
+                    Зв'яжіться з нами для <br> бронювання
+                </div>
+            </div>
+
+            <div class='btn'>
+                <a class='button' href='#'>ЗАМОВЛЕННЯ СТОЛИКА</a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="menu">
+    <div class="container">
+        <h1>Меню</h1>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="dish1.jpg" alt="">
+                <h2>Страва 1</h2>
+                <p>Опис страви 1</p>
+            </div>
+            <div class="menu-item">
+                <img src="dish2.jpg" alt="">
+                <h2>Страва 2</h2>
+                <p>Опис страви 2</p>
+            </div>
+            <!-- Додайте інші страви тут -->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
